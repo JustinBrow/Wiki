@@ -14,16 +14,14 @@
     {% include {{ site.inc_before_header }} %}
     {% endif %}
 
-    <a href=".">
-      <div class="w3-hide-medium w3-hide-small">
-        {% if site.logo_url %}
-        {% include git-wiki/components/logo/logo.html %}
-        {% else %}
-        <h1>{{ site.title | escape }}</h1>
-        {% endif %}
-      </div>
-    </a>
-
+    <div class="w3-hide-medium w3-hide-small">
+      {% if site.logo_url %}
+      {% include git-wiki/components/logo/logo.html %}
+      {% else %}
+      <a href="."><h1>{{ site.title | escape }}</h1></a>
+      {% endif %}
+    </div>
+    
 
     {% if site.github.is_user_page %}
     <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
